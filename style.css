@@ -237,7 +237,7 @@ h2 {
 
 /* PCでは改行しない */
 .sp-br {
-    display: none;
+    display: none; 
 }
 
 /* スマホだけ改行 */
