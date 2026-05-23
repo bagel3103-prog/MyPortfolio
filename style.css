@@ -1,0 +1,423 @@
+@charset "UTF-8";
+
+nav {
+    background-color: rgba(236, 200, 200);
+    padding: 80px 0;
+    margin: 0;
+    box-shadow: 0 -8px 20px rgba(0,0,0,0.05);
+}
+
+/* ナビリンク */
+nav a {
+    text-decoration: none;
+    color: #333 !important;
+    margin: 0 28px;
+
+    position: relative;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+/* 下線 */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: rgba(236, 200, 200);
+    transition: 0.3s ease;
+    background-color: white;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   全体
+========================= */
+
+body {
+    margin: 0;
+   background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,0.45) 6px,
+        transparent 6px
+    ) 0 0 / 70px 70px,
+
+    linear-gradient(
+        135deg,
+        #eef4f7 0%,
+        #dfe5f3 30%,
+        #f6e6ea 100%
+    );
+}
+
+/* =========================
+   見出し
+========================= */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    color: #444;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #444;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   セクション
+========================= */
+.about,
+.works,
+.contact {
+    padding: 120px 20px;
+}
+
+/* =========================
+   TOP スライダー
+========================= */
+
+#carouselExampleIndicators {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+#carouselExampleIndicators .carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* 矢印をシンプルに */
+#carouselExampleIndicators .carousel-control-prev-icon,
+#carouselExampleIndicators .carousel-control-next-icon {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+/* プロフィール画像 */
+.photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid whitesmoke;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* ふりがな */
+.name-ruby {
+    font-size: 0.95rem;
+    letter-spacing: 0.5em;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* 漢字の名前 */
+.name-main {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #444;
+    margin-bottom: 18px;
+    text-align: center;
+
+    text-shadow: 1px 1px 4px rgba(8, 8, 14, 0.08);
+}
+
+/* 補足 */
+.profile-note {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* 自己紹介文 */
+.about p {
+    text-align: center;
+}
+
+.description-large {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+/* 説明文 */
+.description {
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 700px;
+    box-shadow: 0 1px 1px #444;
+    text-align: center;
+}
+
+/* 説明文の文字 */
+.description ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;  
+}
+/* 説明文1行ずつ */
+.description li {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* スキル */
+.skills {
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 700px;
+    box-shadow: 0 1px 1px #444;
+    text-align: center;
+}
+
+
+/* スキルリスト */
+.skills ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;  
+}
+
+.skill-large {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+/* スキル1行ずつ */
+.skills li {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* =========================
+   WORKS
+========================= */
+
+/* カード全体 */
+.work {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* hoverアニメーション */
+.work:hover {
+    transform: translateY(-5px);
+}
+
+/* 作品画像 */
+.work img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* カード内 */
+.card-body {
+    padding: 22px;
+    background: rgba(255,255,255,0.85);
+
+    border-top: 1px solid rgba(236,200,200,0.35);
+
+    text-align: center;
+
+    border-radius: 0 0 15px 15px;
+}
+
+.carousel-item img {
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.modal-content {
+    border: none;
+}
+
+/* 矢印の黒丸 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 50%;
+    padding: 30px;
+    background-size: 100%;
+}
+
+/* 左矢印（青） */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(236, 200, 200)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0L4.5.75 1.25 4l3.25 3.25.75-.75L2.75 4 5.25 1.5z'/%3E%3C/svg%3E");
+}
+
+/* 右矢印（青） */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(236, 200, 200)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0L2 0.75 5.25 4 2 7.25l.75.75L6.75 4z'/%3E%3C/svg%3E");
+}
+
+.art-caption {
+    display: table;
+    text-align: center;
+    margin: 20px auto 0;
+
+    font-size: 0.85rem;
+    line-height: 1.9;
+    color: #222222;
+    font-weight: 500;
+
+    background: rgba(255, 236, 241, 0.92);
+    padding: 15px 25px;
+    border-radius: 18px;
+
+    max-width: 100%;
+
+    word-break: keep-all;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    letter-spacing: 0.05em;
+}
+
+.slide-counter {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #444;
+    color: white;
+
+    padding: 8px 18px;
+    border-radius: 20px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    z-index: 10;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact {
+    text-align: center;
+    padding: 0;
+    background: none;
+}
+
+.contact-form {
+    padding: 80px 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border-radius: 12px;
+    padding: 14px;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.contact-form button {
+    border-radius: 30px;
+    padding: 12px;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+/* hover */
+.work img:hover {
+    opacity: 0.8;
+   transform: scale(1.02);
+}
+
+.contact a:hover {
+    opacity: 0.7;
+}
+
+/* アイコン */
+.contact i {
+    margin-right: 10px;
+}
+
+/* 問い合わせフォーム */
+.form-title {
+    color: #444;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+
+    margin-bottom: 60px;
+} 
+
+/* =========================
+   レスポンシブ
+========================= */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .photo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .work img {
+        height: 200px;
+    }
+}
+
+    footer {
+    background-color: rgba(236, 200, 200, 0.92);
+    padding: 80px 0;
+    margin: 0;
+    box-shadow: 0 -8px 20px rgba(0,0,0,0.05);
+}
