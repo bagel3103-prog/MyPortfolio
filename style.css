@@ -5,7 +5,7 @@ nav {
     padding: 40px 0;
     margin: 0;
     box-shadow: 0 -8px 20px rgba(0,0,0,0.05);
-     border-bottom: 3px solid rgba(255,255,255,0.75);
+     border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 /* ナビリンク */
@@ -108,11 +108,11 @@ h2 {
 @media screen and (max-width: 768px) {
 
     #carouselExampleIndicators {
-        height: calc(100dvh - 100px);
+        height: calc(100dvh - 90px);
     }
 
     #carouselExampleIndicators .carousel-item img {
-        height: calc(100dvh - 100px);
+        height: calc(100dvh - 90px);
         object-fit: cover;
     }
 
