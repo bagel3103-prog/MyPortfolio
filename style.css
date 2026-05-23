@@ -235,13 +235,23 @@ h2 {
     font-weight: 700;
 }
 
-/* スキル1行ずつ */
-@media screen and (max-width:768px){
-    .skills li {
-        margin-bottom: 15px;
-        text-align: center;
-        white-space: nowrap;
+/* PCでは改行しない */
+.sp-br {
+    display: none;
+}
+
+/* スマホだけ改行 */
+@media screen and (max-width: 768px) {
+
+    .sp-br {
+        display: block;
     }
+
+    .skills li {
+        text-align: center;
+        white-space: normal;
+    }
+
 }
 
 /* =========================
