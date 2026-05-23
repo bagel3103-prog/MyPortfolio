@@ -104,7 +104,6 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
-        </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/slider/slider1.jpg" class="d-block w-100" alt="...">
@@ -146,7 +145,7 @@
             </div>
 
             <!-- 自己紹介 -->
-            <div-class="profile-text">
+            <div class="profile-text">
                 <p class="name-ruby">なかむら　　さとみ</p>
 
                 <h3 class="name-main">
@@ -301,6 +300,7 @@
                             <p class="art-caption">
                                 「構成油彩」<br>
                                 スケッチ取材をもとに描いた作品<br>
+                            </p>
                         </div>
 
                         <div class="carousel-item">
@@ -712,7 +712,7 @@
             <h1><i class="fas fa-envelope"></i> CONTACT</h1>
 
    <!-- 問い合わせフォーム -->
-   <section class="contact-form py-5" id="contact">
+   <section class="contact-form py-5">
     <div class="container" style="max-width:700px;">
 
         <p class="text-center mb-4 contact-title">
@@ -792,6 +792,7 @@ $('#charcoalCarousel').on('slid.bs.carousel', function (e) {
     let index = $(e.relatedTarget).index() + 1;
     $('#charcoalCurrent').text(index);
 });
+
 </script>
 
 </body>
