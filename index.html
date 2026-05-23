@@ -797,7 +797,68 @@ $('#charcoalCarousel').on('slid.bs.carousel', function (e) {
     let index = $(e.relatedTarget).index() + 1;
     $('#charcoalCurrent').text(index);
 });
+</script>
 
+<script>
+const isLine = navigator.userAgent.includes("Line");
+
+if (isLine) {
+
+  const popup = document.createElement("div");
+  popup.innerHTML = `
+    <div style="
+      position:fixed;
+      top:0; left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.65);
+      z-index:9999;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    ">
+      <div style="
+        background:white;
+        border-radius:20px;
+        padding:30px;
+        max-width:350px;
+        text-align:center;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      ">
+        <h3>Safariで開いてください</h3>
+        <p>
+          LINE内ブラウザでは<br>
+          画面表示が崩れる場合があります。<br><br>
+          右上の「︙」→<br>
+          「Safariで開く」を選んでください。
+        </p>
+
+        <button onclick="this.closest('div').parentNode.remove()"
+          style="
+            margin-top:20px;
+            padding:12px 24px;
+            border:none;
+            border-radius:30px;
+            background:#ecc8c8;
+            cursor:pointer;
+          ">
+          閉じる
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(popup);
+}
+</script>
+
+<script>
+const ua = navigator.userAgent.toLowerCase();
+
+if (ua.includes("line")) {
+    document.getElementById("lineNotice").style.display = "flex";
+}
 </script>
 
 </body>
