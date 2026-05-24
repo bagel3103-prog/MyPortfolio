@@ -262,6 +262,15 @@ h2 {
    WORKS
 ========================= */
 
+.works-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: -15px;
+    margin-bottom: 35px;
+    letter-spacing: 0.05em;
+}
+
 /* カード全体 */
 .work {
     border: none;
